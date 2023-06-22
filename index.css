@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  font-family: monospace;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+}
+
+#Formula-1 {
+  display: flex;
+  justify-content: center;
+  background: #c6c5c5;
+  opacity: 0.8;
+  height: 11rem;
+  padding: 3rem;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#racersContainer {
+  margin-top: 20px;
+}
+
+.card {
+  border: 1px solid #ffffff;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.input-text {
+  width: 200px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.search-bar {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+#search-button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #e04b52;
+  border: none;
+  border-radius: 0;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: whitesmoke;
+  border: #e04b52 solid 1px;
+  color: #e04b52;
+}
+
+h2 {
+  margin-bottom: 5px;
+}
