@@ -8,16 +8,19 @@ function fetchRacersAndPopulateCards() {
 
   // Fetch racers from the API
   fetch('http://localhost:3000/racer')
-    .then(response => response.json())
-    .then(data => {
-      const racers = data;
-      const searchTerm = searchInput.value.toLowerCase();
-      
-      // Filter racers based on search term
-      const filteredRacers = racers.filter(racer =>
-        racer.name.toLowerCase().includes(searchTerm)
-      );
+  .then(response => response.json())
+  .then(data => {
+    const racers = data;
+    const searchTerm = searchInput.value.toLowerCase();
 
+    // Filter racers based on search term
+    const filteredRacers = racers.filter(racer =>
+      racer.name.toLowerCase().includes(searchTerm)
+    );
+
+    if (filteredRacers.length === 0) {
+      displayRacerNotFound();
+    } else {
       // Generate racer cards
       filteredRacers.forEach(racer => {
         const card = document.createElement('div');
@@ -33,10 +36,11 @@ function fetchRacersAndPopulateCards() {
         `;
         racersContainer.appendChild(card);
       });
-    })
-    .catch(error => {
-      console.error('Error:', error);
-    });
+    }
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
 }
 
 // Event listener for search button click
