@@ -31,7 +31,7 @@ function filterRacers(racers, searchTerm) { // create a function that fillters t
 // I have created a different function to generate or create card for the racer with all of their info. 
 function generateRacerCards(racers, racersContainer) { 
   racers.forEach(racer => { // here saying thay for each one of the racers I want to return this 
-    const card = document.createElement('div');// using the div from my HTML code 
+    const card = document.createElement('div');// using the div from my HTML code to generate a new space with a card style.
     card.classList.add('card'); // create a card with a style of list and this is going to take plase in my racercontainer 
     card.innerHTML = `
       <img src="${racer.image}" alt="${racer.name}">
